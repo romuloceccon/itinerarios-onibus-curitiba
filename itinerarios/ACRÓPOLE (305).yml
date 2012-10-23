@@ -1,18 +1,13 @@
 ---
 CODIGO: '305'
 NOME: ACRÓPOLE
-0:
-- ! "\r\n\tThe page cannot be displayed\r\n    "
-- ! "\r\n\tThere is a problem with the page you are trying to reach and it cannot
-  be displayed."
-- ! "\r\n\t\r\n\r\n\tPlease try the following:\r\n\r\n\tClick the \r\n      \r\n      Refresh
-  button, or try again later.\r\n\t  \r\n      Open the \r\n\t  \r\n\t  \r\n\t  <!--\r\n\t
-  \ if (!((window.navigator.userAgent.indexOf(\"MSIE\") > 0) && (window.navigator.appVersion.charAt(0)
-  == \"2\")))\r\n\t  {\r\n\t  \t Homepage();\r\n\t  }\r\n\t  //-->\r\n\t  \r\n\r\n\t
-  \ home page, and then look for links to the information you want. \r\n    HTTP 500.100
-  - Internal Server\r\n    Error - ASP error\r\n    Internet Information Services\r\n\r\n\tTechnical
-  Information (for support personnel)\r\n\r\nError Type:\r\nMicrosoft OLE DB Provider
-  for Oracle (0x80004005)ORA-12545: Connect failed because target host or object does
-  not exist\n/centro/printRuas.asp, line 11\r\n\r\nBrowser Type:\r\nRuby\r\n\r\n\r\nPage:\r\nGET
-  /centro/printRuas.asp?codLinha=305\r\n\r\nTime:\r\nTuesday, October 23, 2012, 9:06:17
-  AM\r\n\r\n\r\n\r\nMore information:Microsoft Support\r\n\r\n\r\n\r\n    "
+TRAJETO DE IDA:
+- TERMINAL CENTENÁRIO
+- R. MANOEL MAXIMO DOS SANTOS
+- R. FILIPINAS
+- R. ENGENHEIRO BENEDITO MARIO DA SILVA
+- R. ANTONIO MOREIRA LOPES
+- R. RIVADAVIA FONSECA DE MACEDO
+- R. JOAO TOBIAS DE PAIVA NETTO
+- R. ENGENHEIRO BENEDITO MARIO DA SILVA
+- R. TAILANDIA
