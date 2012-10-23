@@ -1,18 +1,68 @@
 ---
 CODIGO: '358'
 NOME: AEROPORTO
-0:
-- ! "\r\n\tThe page cannot be displayed\r\n    "
-- ! "\r\n\tThere is a problem with the page you are trying to reach and it cannot
-  be displayed."
-- ! "\r\n\t\r\n\r\n\tPlease try the following:\r\n\r\n\tClick the \r\n      \r\n      Refresh
-  button, or try again later.\r\n\t  \r\n      Open the \r\n\t  \r\n\t  \r\n\t  <!--\r\n\t
-  \ if (!((window.navigator.userAgent.indexOf(\"MSIE\") > 0) && (window.navigator.appVersion.charAt(0)
-  == \"2\")))\r\n\t  {\r\n\t  \t Homepage();\r\n\t  }\r\n\t  //-->\r\n\t  \r\n\r\n\t
-  \ home page, and then look for links to the information you want. \r\n    HTTP 500.100
-  - Internal Server\r\n    Error - ASP error\r\n    Internet Information Services\r\n\r\n\tTechnical
-  Information (for support personnel)\r\n\r\nError Type:\r\nMicrosoft OLE DB Provider
-  for Oracle (0x80004005)ORA-12545: Connect failed because target host or object does
-  not exist\n/centro/printRuas.asp, line 11\r\n\r\nBrowser Type:\r\nRuby\r\n\r\n\r\nPage:\r\nGET
-  /centro/printRuas.asp?codLinha=358\r\n\r\nTime:\r\nTuesday, October 23, 2012, 9:06:17
-  AM\r\n\r\n\r\n\r\nMore information:Microsoft Support\r\n\r\n\r\n\r\n    "
+TRAJETO DE IDA:
+- ESTAÇÃO TUBO CENTRO CÍVICO (PALÁCIO IGUAÇU)
+- R. CANDIDO DE ABREU
+- ESTAÇÃO TUBO PREFEITURA
+- R. BARAO DE ANTONINA
+- R. LUIZ LEAO
+- ESTAÇÃO TUBO CIRCULO MILITAR
+- R. TIBAGI
+- ESTAÇÃO TUBO RODOFERROVIÁRIA
+- AV. SETE DE SETEMBRO
+- R. MARIANO TORRES
+- AV. VISCONDE DE GUARAPUAVA
+- R. JOAO NEGRAO
+- ESTAÇÃO PAIOL
+- R. COMENDADOR ROSEIRA
+- R. IAPO
+- R. JOQUEI CLUBE
+- ESTAÇÃO TUBO PUC
+- R. IMACULADA CONCEICAO
+- AV. SENADOR SALGADO FILHO
+- ESTAÇÃO TUBO SALGADO FILHO
+- R. CORONEL FRANCISCO H. DOS SANTOS
+- R. MINISTRO GABRIEL PASSOS
+- AV. COMENDADOR FRANCO
+- R. EDUARDO VICTOR PIECHNIK
+- AV. SENADOR SALGADO FILHO
+- AV. COMENDADOR FRANCO
+- AV. DAS TORRES (SJ. DOS PINHAIS)
+- ROD. BR 376 (SJ. DOS PINHAIS)
+- R. NORBERTO DE BRITO (SJ. DOS PINHAIS)
+- AV. COMANDANTE AVIADOR JOSÉ PAULO LIPINSKI (SJ. DOS PINHAIS)
+- ESTAÇÃO TUBO AEROPORTO AFONSO PENA
+TRAJETO DE VOLTA:
+- ESTAÇÃO TUBO AEROPORTO AFONSO PENA
+- AV. ROCHA POMBO (SJ. DOS PINHAIS)
+- AV. DAS TORRES (SJ. DOS PINHAIS)
+- AV. COMENDADOR FRANCO
+- R. EDUARDO VICTOR PIECHNIK
+- AV. SENADOR SALGADO FILHO
+- R. CAPITAO ZEPPIN
+- R. CORONEL FRANCISCO H. DOS SANTOS
+- ESTAÇÃO TUBO SALGADO FILHO
+- AV. SENADOR SALGADO FILHO
+- ESTAÇÃO TUBO PUC
+- R. IMACULADA CONCEICAO
+- R. COMENDADOR ROSEIRA
+- R. CONSELHEIRO LAURINDO
+- ESTAÇÃO PAIOL
+- AV. SILVA JARDIM
+- R. MARIANO TORRES
+- ESTAÇÃO TUBO RODOFERROVIÁRIA
+- AV. SETE DE SETEMBRO
+- R. CONSELHEIRO LAURINDO
+- R. BENJAMIN CONSTANT
+- R. MARIANO TORRES
+- ESTAÇÃO TUBO CIRCULO MILITAR
+- R. LUIZ LEAO
+- R. BARAO DE ANTONINA
+- R. HEITOR STOCKLER DE FRANCA
+- R. CANDIDO DE ABREU
+- ESTAÇÃO TUBO PREFEITURA
+- R. ERNANI SANTIAGO DE OLIVEIRA
+- R. PREFEITO ROSALVO GOMES MELLO LEITAO
+- ESTAÇÃO TUBO CENTRO CÍVICO (ASSEMBLÉIA)
+- R. PROFESSOR BENEDITO NICOLAU DOS SANTOS
