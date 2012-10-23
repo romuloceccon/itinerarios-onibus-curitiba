@@ -1,0 +1,18 @@
+---
+CODIGO: '393'
+NOME: PINHEIRINHO/ZOOLÓGICO
+0:
+- ! "\r\n\tThe page cannot be displayed\r\n    "
+- ! "\r\n\tThere is a problem with the page you are trying to reach and it cannot
+  be displayed."
+- ! "\r\n\t\r\n\r\n\tPlease try the following:\r\n\r\n\tClick the \r\n      \r\n      Refresh
+  button, or try again later.\r\n\t  \r\n      Open the \r\n\t  \r\n\t  \r\n\t  <!--\r\n\t
+  \ if (!((window.navigator.userAgent.indexOf(\"MSIE\") > 0) && (window.navigator.appVersion.charAt(0)
+  == \"2\")))\r\n\t  {\r\n\t  \t Homepage();\r\n\t  }\r\n\t  //-->\r\n\t  \r\n\r\n\t
+  \ home page, and then look for links to the information you want. \r\n    HTTP 500.100
+  - Internal Server\r\n    Error - ASP error\r\n    Internet Information Services\r\n\r\n\tTechnical
+  Information (for support personnel)\r\n\r\nError Type:\r\nADODB.Recordset (0x800A0BCD)Either
+  BOF or EOF is True, or the current record has been deleted. Requested operation
+  requires a current record./centro/printRuas.asp, line 40\r\n\r\nBrowser Type:\r\nRuby\r\n\r\n\r\nPage:\r\nGET
+  /centro/printRuas.asp?codLinha=393\r\n\r\nTime:\r\nTuesday, October 23, 2012, 9:08:44
+  AM\r\n\r\n\r\n\r\nMore information:Microsoft Support\r\n\r\n\r\n\r\n    "
