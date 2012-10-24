@@ -46,11 +46,12 @@ end
 
 def get_tile_coordinates(x0, y0, xn, yn)
   result = []
-  ya, row = y0, 1
-  while ya < yn
-    xa, col = x0, 1
-    while xa < xn
-      result << { row: row, col: col, request_options: { x0: xa, y0: ya, h: TILE_HEIGHT } }
+  border = TILE_HEIGHT / 2
+  ya, row = y0 - border, 1
+  while ya < yn + border
+    xa, col = x0 - border * RATIO, 1
+    while xa < xn + border * RATIO
+      result << { 'row' => row, 'col' => col, 'request_options' => { 'x0' => xa, 'y0' => ya, 'h' => TILE_HEIGHT } }
       col += 1
       xa += TILE_HEIGHT * RATIO
     end
@@ -80,28 +81,34 @@ $database.each_pair do |k, v|
   
   req_id = rand(1_000_000)
   x0, y0, xn, yn = generate_tile(k, req_id)
+  tiles = get_tile_coordinates(x0, y0, xn, yn)
   file_name = "map_#{k}.gif"
+  STDERR.puts "Downloading map #{k} (#{v['nome']}) to #{file_name}"
   download_tile(file_name, req_id)
   
-  $database[k]['map'] = { 'x0' => x0, 'y0' => y0, 'xn' => xn, 'yn' => yn, 'file_name' => file_name }
+  $database[k]['map'] = { 'x0' => x0, 'y0' => y0, 'xn' => xn, 'yn' => yn, 'file_name' => file_name, 'tiles' => tiles }
   save_database
 end
 
-=begin
-puts "Downloading tile (#{x0}, #{y0}), (#{xn}, #{yn})"
+$database.each_pair do |k, v|
+  map = v['map']
+  tiles = map && v['map']['tiles']
+  next unless tiles
+  
+  tiles.each do |tile|
+    next if tile['file_name']
+    
+    row, col = tile['row'], tile['col']
 
-ya, j = y0, 1
-while ya < yn
-  xa, i = x0, 1
-  while xa < xn
     req_id = rand(1_000_000)
-    x1, y1, x2, y2 = generate_tile('461', req_id, { x0: xa, y0: ya, h: TILE_HEIGHT })
-    puts "Tile #{i},#{j}: (#{x1}, #{y1}), (#{x2}, #{y2})"
-    download_tile("t-%02d-%02d.gif" % [i, j], req_id)
-    i += 1
-    xa += TILE_HEIGHT * RATIO
+    generate_tile(k, req_id, tile['request_options'])
+    
+    Dir.mkdir(k) unless File.exist?(k)
+    file_name = "k/%02d_%02d.gif" % [row, col]
+    STDERR.puts "Downloading tile #{row},#{col} to #{file_name}"
+    download_tile(file_name, req_id)
+    
+    tile['file_name'] = file_name
+    save_database
   end
-  j += 1
-  ya += TILE_HEIGHT
 end
-=end
