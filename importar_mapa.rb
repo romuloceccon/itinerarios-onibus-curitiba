@@ -1,6 +1,7 @@
 require 'net/http'
 
 RATIO = 1.249376559
+TILE_HEIGHT = 500.0 # 1250.0, 500.0, 200.0
 
 def generate_tile(linha, req_id, options = {})
   x0 = options[:x0].to_f
@@ -49,13 +50,13 @@ while ya < yn
   xa, i = x0, 1
   while xa < xn
     req_id = rand(1_000_000)
-    x1, y1, x2, y2 = generate_tile('461', req_id, { x0: xa, y0: ya, h: 1250.0 })
+    x1, y1, x2, y2 = generate_tile('461', req_id, { x0: xa, y0: ya, h: TILE_HEIGHT })
     puts "Tile #{i},#{j}: (#{x1}, #{y1}), (#{x2}, #{y2})"
     download_tile("t-%02d-%02d.gif" % [i, j], req_id)
     i += 1
-    xa += 1250.0 * RATIO
+    xa += TILE_HEIGHT * RATIO
   end
   j += 1
-  ya += 1250.0
+  ya += TILE_HEIGHT
 end
 
