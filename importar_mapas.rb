@@ -93,7 +93,7 @@ if __FILE__ == $0
     download_tile(file_name, req_id)
     
     tile_database = "#{k}.yml"
-    File.open(tile_database, 'w+') { |x| YAML.dump(tiles, x) }
+    save_database(tile_database, tiles)
     
     $database[k]['map'] = { 'x0' => x0, 'y0' => y0, 'xn' => xn, 'yn' => yn,
         'file_name' => file_name, 'database' => tile_database }
