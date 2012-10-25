@@ -1,5 +1,6 @@
 require 'net/http'
 require 'yaml'
+require 'fileutils'
 require 'linhas_curitiba'
 
 RATIO = 501.0 / 401.0
@@ -61,8 +62,10 @@ def get_tile_coordinates(x0, y0, xn, yn)
   result
 end
 
-def save_database
-  File.open(DATABASE, 'w+') { |x| YAML.dump($database, x) }
+def save_database(file_name, data)
+  tmp = "#{file_name}.tmp"
+  File.open(tmp, 'w+') { |x| YAML.dump(data, x) }
+  FileUtils.mv(tmp, file_name)
 end
 
 if __FILE__ == $0
@@ -71,7 +74,7 @@ if __FILE__ == $0
     get_linhas_curitiba.each_pair do |k, v|
       $database[k] = { 'nome' => v }
     end
-    save_database
+    save_database(DATABASE, $database)
   else
     $database = File.open(DATABASE) { |x| YAML.load(x) }
   end
@@ -94,7 +97,7 @@ if __FILE__ == $0
     
     $database[k]['map'] = { 'x0' => x0, 'y0' => y0, 'xn' => xn, 'yn' => yn,
         'file_name' => file_name, 'database' => tile_database }
-    save_database
+    save_database(DATABASE, $database)
   end
   
   $database.each_pair do |k, v|
@@ -117,7 +120,7 @@ if __FILE__ == $0
       download_tile(file_name, req_id)
       
       tile['file_name'] = file_name
-      File.open(tile_database, 'w+') { |x| YAML.dump(tiles, x) }
+      save_database(tile_database, tiles)
     end
   end
 end
