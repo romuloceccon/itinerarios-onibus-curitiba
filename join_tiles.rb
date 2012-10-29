@@ -75,4 +75,3 @@ end
 print `convert -append #{row_files.join(' ')} #{File.join($output_path, $base_name + '.gif')}`
 row_files.each { |x| FileUtils.rm(x) }
 File.open(File.join($output_path, $base_name + '.yml'), 'w+') { |x| YAML.dump(output_data, x) }
-puts "#{$base_name} ok"
