@@ -8,6 +8,11 @@ $base_name = File.basename($database, '.yml')
 
 data = File.open($database) { |x| YAML.load(x) }
 
+unless data.respond_to?(:all?) && data.all? { |x| x.respond_to?(:has_key?) && x.has_key?('row') }
+  STDERR.puts "bad data file"
+  exit(1)
+end
+
 hash = data.group_by { |x| x['row'] }
 $arr = hash.keys.sort.map { |x| hash[x].sort { |a, b| a['col'] <=> b['col'] } }
 
@@ -45,6 +50,11 @@ end
 while $arr.count > 1 do
   break if row_has_blue(-1)
   $arr.delete_at(-1)
+end
+
+if $arr.empty?
+  STDERR.puts "route not found!"
+  exit(1)
 end
 
 while !$arr[0].empty? do
