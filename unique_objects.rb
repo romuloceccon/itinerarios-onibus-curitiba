@@ -8,7 +8,9 @@ STDIN.readlines.each do |line|
     
     found = false
     objects.each_with_index do |obj, i|
-      if (obj[:x] - x).abs + (obj[:y] - y).abs <= 3
+      dist = (obj[:x] - x).abs + (obj[:y] - y).abs
+      rank_ratio = rank < obj[:rank] ? rank * 1.0 / obj[:rank] : obj[:rank] * 1.0 / rank
+      if dist <= 3 || dist <= 10 && rank_ratio < 0.8
         found = true
         objects[i] = this if rank > obj[:rank]
         break
